@@ -83,21 +83,21 @@ char getUserChoice() {
 // Maps the character choice to a readable text representation
 void showChoice(char choice) {
     switch (choice) {
-        case ROCK: std::cout << "Rock 🪨\n"; break;
-        case PAPER: std::cout << "Paper 📄\n"; break;
-        case SCISSORS: std::cout << "Scissors ✂️\n"; break;
+        case ROCK: std::cout << "Rock \n"; break;
+        case PAPER: std::cout << "Paper \n"; break;
+        case SCISSORS: std::cout << "Scissors \n"; break;
     }
 }
 
 // Evaluates the moves according to the game rules and announces the outcome
 void chooseWinner(char player, char computer) {
     if (player == computer) {
-        std::cout << "It's a tie! 🤝\n";
+        std::cout << "It's a tie! \n";
     } 
     else if ((player == ROCK && computer == SCISSORS) ||
              (player == PAPER && computer == ROCK) ||
              (player == SCISSORS && computer == PAPER)) {
-        std::cout << "Congratulations! You win! 🎉\n";
+        std::cout << "Congratulations! You win! \n";
     } 
     else {
         std::cout << "Oh no! You lose. 🤖 wins!\n";
