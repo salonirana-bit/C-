@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+
+int main() {
+    string str = "Find the largest word in a string";
+    stringstream ss(str);
+    string word, largest = "";
+    
+    while (ss >> word) {
+        if (word.length() > largest.length()) {
+            largest = word;
+        }
+    }
+    
+    cout << "Largest word: " << largest << endl;
+    return 0;
+}
